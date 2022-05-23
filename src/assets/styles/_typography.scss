@@ -1,0 +1,53 @@
+:root {
+
+    --text-2xl-fontSize: 1.5rem;
+    --text-2xl-lineHeight: 2rem;
+
+    --text-lg-lineHeight: 1.75rem;
+
+    --text-base-fontSize: 1rem;
+    --text-base-lineHeight: 1.5rem;
+
+    --text-sm-fontSize: .875rem;
+    --text-sm-lineHeight: 1.25rem;
+
+    --text-xs-fontSize: .75rem;
+    --text-xs-lineHeight: 1rem;
+
+}
+
+// Font Sizes
+
+.text-2xl {
+    font-size: var(--text-2xl-fontSize);
+    line-height: var(--text-2xl-lineHeight);
+}
+
+.text-lg {
+    line-height: var(--text-lg-lineHeight);
+}
+
+.text-base {
+    font-size: var(--text-base-fontSize);
+    line-height: var(--text-base-lineHeight);
+}
+
+.text-sm {
+    font-size: var(--text-sm-fontSize);
+    line-height: var(--text-sm-lineHeight);
+}
+
+.text-xs {
+    font-size: var(--text-xs-fontSize);
+    line-height: var(--text-xs-lineHeight);
+}
+
+// Font Weights
+
+.font-normal {
+    font-weight: 400;
+}
+
+.font-bold {
+    font-weight: 700;
+}

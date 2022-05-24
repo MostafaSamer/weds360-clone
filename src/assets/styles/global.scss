@@ -1,7 +1,40 @@
 @import 'colors';
-@import 'responsive';
 @import 'typography';
+@import 'boxstyle';
+@import 'responsive';
 
 body {
+    margin: 0px;
     font-family: 'Lato', sans-serif;
+}
+
+blockquote, dd, dl, figure, h1, h2, h3, h4, h5, h6, hr, p, pre {
+    margin: 0;
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+}
+
+p {
+    line-height:1.5rem;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+fieldset, ol, ul {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: inherit;
+    text-decoration: inherit;
+}
+
+img, video {
+    max-width: 100%;
+    height: auto;
 }

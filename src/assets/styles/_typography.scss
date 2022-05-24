@@ -45,6 +45,24 @@
 // Font Weights
 
 :root {
+    --font-light: 300;
     --font-normal: 400;
+    --font-semibold: 600;
     --font-bold: 700;
+}
+
+.font-light {
+    font-weight: var(--font-light) !important;
+}
+
+.font-normal {
+    font-weight: var(--font-normal) !important;
+}
+
+.font-semibold {
+    font-weight: var(--font-semibold) !important;
+}
+
+.font-bold {
+    font-weight: var(--font-bold) !important;
 }

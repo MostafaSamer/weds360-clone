@@ -73,13 +73,13 @@ function Footer() {
                     <div className='sm:bottom-0 sm:right-0 sm:absolute p-5 md:mr-16'>
                         <ul className='flex justify-center sm:justify-end'>
                             <li>
-                                <a href="https://www.facebook.com/Weds360/" title="Facebook" target="_blank" class="flex-1">
-                                    <img src="https://weds360-production.s3.eu-west-1.amazonaws.com/new-weds360-preprod/PHOTOS/1644512613-Facebook.png" alt="Facebook" class="w-auto h-auto" />
+                                <a href="https://www.facebook.com/Weds360/" title="Facebook" target="_blank" className="flex-1">
+                                    <img src="https://weds360-production.s3.eu-west-1.amazonaws.com/new-weds360-preprod/PHOTOS/1644512613-Facebook.png" alt="Facebook" className="w-auto h-auto" />
                                 </a>
                             </li>
                             <li>
-                                <a href="https://www.instagram.com/weds360/" title="Instagram" target="_blank" class="flex-1">
-                                    <img src="https://weds360-production.s3.eu-west-1.amazonaws.com/new-weds360-preprod/PHOTOS/1644512613-Instagram%20%28filled%29.png" alt="Instagram" class="w-auto h-auto ml-6" />
+                                <a href="https://www.instagram.com/weds360/" title="Instagram" target="_blank" className="flex-1">
+                                    <img src="https://weds360-production.s3.eu-west-1.amazonaws.com/new-weds360-preprod/PHOTOS/1644512613-Instagram%20%28filled%29.png" alt="Instagram" className="w-auto h-auto ml-6" />
                                 </a>
                             </li>
                         </ul>

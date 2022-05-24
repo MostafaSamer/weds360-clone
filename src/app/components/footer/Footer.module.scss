@@ -1,0 +1,39 @@
+.footerSection {
+    background-color: var(--wed-white);
+
+    .footer {
+        background-color: var(--wed-black);
+        color: var(--wed-white);
+        position: relative;
+        border-top-left-radius: 30px;
+        border-top-right-radius: 30px;
+
+        .footerDesc {
+            color: var(--wed-text-gray) !important;
+        }
+
+        .footerHeadSection {
+            color: rgb(128, 128, 128);
+        }
+
+        .footerContactInfo {
+            color: var(--wed-white);
+
+            .footerContactInfoValue {
+                color: rgba(156, 163, 175, 1);
+
+                &:hover {
+                    color: var(--wed-white);
+                }
+            }
+        }
+
+        .footerlink {
+            color: rgba(229,231,235, 1);
+
+            &:hover{
+                color: var(--wed-white);
+            }
+        }
+    }
+}

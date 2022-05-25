@@ -2,8 +2,26 @@ import styles from './featuredvendors.module.scss'
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
+import { useLayoutEffect, useState } from 'react';
 
 function FeaturedVendors() {
+
+    const [slidesPerView, setSlidesPerView] = useState(4);
+
+    function useWindowSize() {
+        useLayoutEffect(() => {
+          function updateSize() {
+            setSlidesPerView(window.innerWidth < 768? 1 : 4);
+          }
+          window.addEventListener('resize', updateSize);
+          updateSize();
+          return () => window.removeEventListener(window.innerWidth < 768? 1 : 4, updateSize);
+        }, []);
+        return [0, 0];
+      }
+
+    const [width, height] = useWindowSize();
+
     return (
         <div>
             <div className="py-5">
@@ -17,10 +35,8 @@ function FeaturedVendors() {
                                 <div className='swiper-container swiper-container-initialized swiper-container-horizontal swiper-container-pointer-events swiper-container-autoheight swiper'>
                                     <Swiper
                                         spaceBetween={10}
-                                        slidesPerView={4}
-                                        onSlideChange={() => console.log('slide change')}
-                                        onSwiper={(swiper) => console.log(swiper)}
-                                        >
+                                        slidesPerView={slidesPerView}
+                                    >
                                         <SwiperSlide>
                                             <div className='p-4 hover:pointer'>
                                                 <a href='https://weds360.com/en/service/61898cec2c5c8629f4951e78/sheraton-miramar-resort-el-gouna'>

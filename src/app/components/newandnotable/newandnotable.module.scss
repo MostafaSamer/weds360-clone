@@ -1,0 +1,24 @@
+.NewNotable {
+    background-color: rgb(246, 246, 246);
+
+    .NewNotableSection {
+        color: rgba(75, 85, 99, 1);
+
+        .NewNotableSwiperSlideContainer {
+            border-color: rgba(229, 231, 235, 0.6);
+            width: 150px;
+
+            .NewNotableSubHeader {
+                color: rgba(156, 163, 175, 1);
+            }
+
+            .NewNotableHeader {
+                color: rgba(17, 24, 39, 1);
+            }
+        }
+
+        .mySwiper {
+            width: 1000px;
+        }
+    }
+}

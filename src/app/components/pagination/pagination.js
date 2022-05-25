@@ -12,8 +12,8 @@ function Pagination({ PageNumbers, selected, changePage }) {
             .map(el => el+1)
             .map((el, index) => {
                 return (
-                    <li onClick={() => { changePage(el) }}>
-                        <a role="button" className={"p-2 m-1 lg:m-2 rounded cursor-pointer shadow-md hover:shadow-lg " + (selected == el? styles.SelectedPage : '')} tabIndex="0" aria-label={"Page " + el}>{el}</a>
+                    <li key={index} onClick={() => { changePage(el) }}>
+                        <a role="button" className={"p-2 m-1 lg:m-2 rounded cursor-pointer shadow-md hover:shadow-lg " + (selected === el? styles.SelectedPage : '')} tabIndex="0" aria-label={"Page " + el}>{el}</a>
                     </li>
                 )
             })}

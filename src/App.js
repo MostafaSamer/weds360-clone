@@ -7,6 +7,7 @@ import TreeView from "./app/components/treeview/treeview"
 import PhotoSearch from './app/components/photosearch/photosearch';
 import FeaturedVendors from './app/components/featuredvendors/featuredvendors';
 import Footer from "./app/components/footer/footer"
+import NewNotable from './app/components/newandnotable/newandnotable';
 
 function App() {
   return (
@@ -24,7 +25,7 @@ function App() {
               <PhotoSearch />
             </div>
             <FeaturedVendors />
-            <div></div>
+            <NewNotable />
           </div>
         </div>
         <Footer />

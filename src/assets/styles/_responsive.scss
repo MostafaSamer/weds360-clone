@@ -165,6 +165,19 @@
     .lg\:h-36 {
         height: 9rem !important;
     }
+    
+    .lg\:w-9\/12 {
+        width: 75% !important;
+    }
+
+    .lg\:mx-auto {
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+    
+    .lg\:pl-0 {
+        padding-left: 0 !important;
+    }
 }
 
 @media (min-width: 1280px) {

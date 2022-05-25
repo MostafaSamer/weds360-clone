@@ -1,6 +1,9 @@
 
 // Paddings
 
+.pt-5 {
+    padding-top: 1.25rem !important;
+}
 .pt-4 {
     padding-top: 1rem !important;
 }
@@ -43,6 +46,11 @@
 .px-auto {
     padding-left: auto !important;
     padding-right: auto !important;
+}
+
+.px-10 {
+    padding-left: 2.5rem !important;
+    padding-right: 2.5rem !important;
 }
 
 .px-5 {
@@ -386,4 +394,40 @@
     &:hover {
         cursor: pointer;
     }
+}
+
+.css-o3d33y {
+    margin: 0px;
+    font-family: Roboto, Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.5;
+    letter-spacing: 0.00938em;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.css-nhb8h9 {
+    display: flex;
+    flex-wrap: wrap;
+    -webkit-box-align: center;
+    align-items: center;
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+}
+
+.css-3mf706 {
+    display: flex;
+    user-select: none;
+    margin-left: 8px;
+    margin-right: 8px;
+}
+
+.css-9l3uo3 {
+    margin: 0px;
+    font-family: Roboto, Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.5;
+    letter-spacing: 0.00938em;
 }

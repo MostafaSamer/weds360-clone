@@ -9,3 +9,56 @@
     background-color: rgba(249, 250, 251, 1);
     border-color: rgba(209, 213, 219, 1);
 }
+
+.NavbarLanguage {
+    background-color: transparent;
+    color: rgba(75, 85, 99, 1);
+
+    &:hover {
+        color: rgba(107, 114, 128, 1);
+    }
+
+    .NavbarLanguageText {
+        background-color: var(--wed-black);
+        color: var(--wed-white);
+        padding-bottom: 5px;
+        padding-right: 4px;
+        padding-left: 4px;
+    }
+}
+
+.SearchBar {
+    position: relative;
+
+    .searchBarIcon {
+        color: rgba(107, 114, 128, 1);
+    }
+
+    .searchBarInput {
+        color: rgba(17, 24, 39, 1);
+        background-color: rgba(249, 250, 251, 1);
+        border-color: rgba(209, 213, 219, 1);
+    }
+}
+
+.NavbarColapseMenu {
+    color: rgba(107, 114, 128, 1);
+}
+
+.NAvBarMenu {
+    margin-left: auto;
+    margin-right: auto;
+
+    .NavBarMenuDrop {
+        box-shadow: var(--tw-ring-offset-shadow,0 0 transparent),var(--tw-ring-shadow,0 0 transparent),var(--tw-shadow);
+        color: rgba(55, 65, 81, 1);
+
+        .NavBarMenuDropText {
+            cursor: pointer;
+
+            &:hover {
+                color: #54989b !important;
+            }
+        }
+    }
+}

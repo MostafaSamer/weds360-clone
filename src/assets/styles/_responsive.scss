@@ -53,6 +53,23 @@
         font-size: .875rem !important;
         line-height: 1.25rem !important;
     }
+
+    .md\:font-medium {
+        font-weight: 500 !important;
+    }
+
+    .md\:text-sm {
+        font-size: .875rem !important;
+        line-height: 1.25rem !important;
+    }
+
+    .md\:mt-2 {
+        margin-top: 0.5rem !important;
+    }
+    
+    .md\:flex-row {
+        flex-direction: row !important;
+    }
 }
 
 @media (min-width: 768px) {
@@ -88,8 +105,29 @@
         order: 3 !important;
     }
 
+    .md\:order-2 {
+        order: 2 !important;
+    }
+
     .md\:mr-0 {
         margin-right: 0 !important;
+    }
+
+    .md\:hidden {
+        display: none !important;
+    }
+
+    .md\:w-auto {
+        width: auto !important;
+    }
+
+    .md\:order-1 {
+        order: 1 !important;
+    }
+    
+    .md\:my-4 {
+        margin-top: 1rem !important;
+        margin-bottom: 1rem !important;
     }
 }
 
@@ -114,6 +152,10 @@
 
     .lg\:hidden {
         display: none;
+    }
+
+    .lg\:block {
+        display: block !important;
     }
 }
 

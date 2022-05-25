@@ -6,7 +6,7 @@ function PhotoGrid({ children }) {
             <div className="flex flex-wrap -m-4 ">
                 {children.map((el, index) => {
                     return (
-                        <div className="p-4 md:w-1/3 hover:pointer">
+                        <div key={index} className="p-4 md:w-1/3 hover:pointer">
                             <a href="https://weds360.com/en/photo/616cbb89f37e6443c8340e88/irresistible-appetizers%E2%80%99-corner">
                                 {el}
                             </a>

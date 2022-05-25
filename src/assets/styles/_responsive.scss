@@ -194,6 +194,14 @@
     .lg\:flex-col {
         flex-direction: column;
     }
+    
+    .lg\:mt-5 {
+        margin-top: 1.25rem;
+    }
+    
+    .lg\:m-2 {
+        margin: 0.5rem;
+    }
 }
 
 @media (min-width: 1280px) {

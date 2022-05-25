@@ -8,7 +8,7 @@ function TreeView({ element }) {
                     {element.map((el, index) => {
                         return (
                             <>
-                                {index == 0 && <li className="MuiBreadcrumbs-li">
+                                {index === 0 && <li className="MuiBreadcrumbs-li">
                                     <a href={el.state} className={styles.TreeElementAnchor + " font-bold text-lg"}>{el.name}</a>
                                 </li>}
                                 {index !== 0 && <>

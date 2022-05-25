@@ -3,8 +3,12 @@ import styles from "./photosearch.module.scss"
 import PhotoGrid from "../photogrid/photogrid"
 import PhotoCard from "../photocard/photocard"
 import BtnPrimary from "../btn-primary/btn-primary"
+import Pagination from "../pagination/pagination"
+import { useState } from "react"
 
 function PhotoSearch() {
+
+    const [currentPage, SetCurrentPage] = useState(1);
 
     const onSearchClick = (e) => {
         console.log(e)
@@ -12,6 +16,12 @@ function PhotoSearch() {
 
     const onClearClick = (e) => {
         console.log(e)
+    }
+
+    const onChangePage = (pageNumber) => {
+        console.log(pageNumber);
+        SetCurrentPage(pageNumber)
+
     }
 
     return (
@@ -51,6 +61,8 @@ function PhotoSearch() {
                         <PhotoCard />
                         <PhotoCard />
                     </PhotoGrid>
+
+                    <Pagination PageNumbers={8} selected={currentPage} changePage={onChangePage} />
                 </section>
             </div>
         </div>

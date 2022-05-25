@@ -4,7 +4,7 @@ function Pagination({ PageNumbers, selected, changePage }) {
     return (
         <ul className="w-9/12 list-none flex justify-center mx-auto mb-10 mt-16 lg:mt-5">
             
-            <li className="previous disabled">
+            <li  onClick={() => { selected != 1 && changePage(selected - 1) }} className="previous disabled">
                 <a className="p-2 m-1 lg:m-2 rounded cursor-pointer shadow-md hover:shadow-lg" tabIndex="0" role="button" aria-disabled="true" aria-label="Previous page" rel="prev">Previous</a>
             </li>
             
@@ -32,7 +32,7 @@ function Pagination({ PageNumbers, selected, changePage }) {
             })}
             
 
-            <li className="next">
+            <li  onClick={() => { selected != PageNumbers && changePage(selected + 1) }} className="next">
                 <a className="p-2 m-1 lg:m-2 rounded cursor-pointer shadow-md hover:shadow-lg" tabIndex="0" role="button" aria-disabled="false" aria-label="Next page" rel="next">Next</a>
             </li>
         </ul>

@@ -42,6 +42,11 @@
     line-height: var(--text-xs-lineHeight);
 }
 
+.text-lg, .text-xl {
+    line-height: 1.75rem;
+    font-size: 1.125rem;
+}
+
 // Font Weights
 
 :root {

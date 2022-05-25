@@ -328,6 +328,10 @@
     width: 1.5rem !important;
 }
 
+.h-full {
+    height: 100% !important;
+}
+
 .ml-10 {
     margin-left: 2.5rem !important;
 }
@@ -342,4 +346,20 @@
 
 .z-10 {
     z-index: 10 !important;
+}
+
+.overflow-hidden {
+    overflow: hidden !important;
+}
+
+.object-cover {
+    object-fit: cover !important;
+}
+
+.object-center {
+    object-position: center !important;
+}
+
+.text-center {
+    text-align: center !important;
 }

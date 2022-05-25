@@ -5,7 +5,7 @@ import '../src/assets/styles/global.scss'
 import Navbar from "./app/components/navbar/navbar"
 import TreeView from "./app/components/treeview/treeview"
 import PhotoSearch from './app/components/photosearch/photosearch';
-// import BtnPrimary from "./app/components/btn-primary/btn-primary"
+import FeaturedVendors from './app/components/featuredvendors/featuredvendors';
 import Footer from "./app/components/footer/footer"
 
 function App() {
@@ -13,15 +13,6 @@ function App() {
     <div className="App">
       <div>
         <Navbar />
-        {/* <BtnPrimary text="Click Me!" onClick={() => { alert("OK") }} /> */}
-        {/* <PhotoGrid>
-          <PhotoCard />
-          <PhotoCard />
-          <PhotoCard />
-          <PhotoCard />
-          <PhotoCard />
-          <PhotoCard />
-        </PhotoGrid> */}
         <div>
           <div>
             <div>
@@ -32,7 +23,7 @@ function App() {
 
               <PhotoSearch />
             </div>
-            <div></div>
+            <FeaturedVendors />
             <div></div>
           </div>
         </div>

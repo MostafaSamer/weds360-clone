@@ -38,13 +38,13 @@ function Navbar() {
                         <div className="flex md:order-2 items-center justify-center mx-auto">
                             <div className={styles.SearchBar + ' hidden mr-3 md:mr-0 lg:block'} style={{width: "300px"}}>
                                 <div className="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
-                                    <svg className={styles.searchBarIcon + ' w-5 h-5'} fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"></path></svg>
+                                    <svg className={styles.searchBarIcon + ' w-5 h-5'} fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clipRule="evenodd"></path></svg>
                                 </div>
-                                <input type="text" autocomplete="off" id="email-adress-icon" className={styles.searchBarInput + ' block p-2 pl-10 w-10/12 bg-gray-50 rounded-lg border sm:text-sm step10'} placeholder="Search" />
+                                <input type="text" autoComplete="off" id="email-adress-icon" className={styles.searchBarInput + ' block p-2 pl-10 w-10/12 bg-gray-50 rounded-lg border sm:text-sm step10'} placeholder="Search" />
                             </div>
                             <button type="button" className={styles.NavbarColapseMenu + ' inline-flex items-center p-2 text-sm rounded-lg md:hidden '} aria-controls="mobile-menu-3" aria-expanded="false">
                                 <span className="sr-only">Open main menu</span>
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true" className="w-6 h-6 ml-10"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true" className="w-6 h-6 ml-10"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
                             </button>
                         </div>
                         

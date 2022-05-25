@@ -18,161 +18,159 @@ function NewNotable() {
                                         className={styles.mySwiper}
                                         spaceBetween={10}
                                         slidesPerView={6}
-                                        // Autoplay={true}
-                                        onSlideChange={() => console.log('slide change')}
-                                        onSwiper={(swiper) => console.log(swiper)}
+                                        autoPlay={true}
                                         >
                                         <SwiperSlide>
-                                            <div class="p-4 hover:pointer">
+                                            <div className="p-4 hover:pointer">
                                                 <a target="_blank" href="/en/service/61898cec2c5c8629f4951dcf/hoxton-house">
-                                                    <div class={styles.NewNotableSwiperSlideContainer + ' h-48 border-2 rounded-lg overflow-hidden shadow-md hover:shadow-lg'}>
-                                                        <img class="h-32 w-full object-cover object-center" src="https://weds360-production.s3.amazonaws.com/VENDOR_SERVICES/61898cec2c5c8629f4951dcf/webp/large-2092600109bec3b00995810b7ab56aa5.webp" alt="Hoxton House" />
-                                                        <div class="p-2">
-                                                            <h2 class={styles.NewNotableSubHeader + ' tracking-widest text-xs font-medium text-gray-400 mb-1'}>Hoxton House</h2>
-                                                            <h1 class={styles.NewNotableHeader + ' title-font text-xs font-medium'}>Hoxton House</h1>
+                                                    <div className={styles.NewNotableSwiperSlideContainer + ' h-48 border-2 rounded-lg overflow-hidden shadow-md hover:shadow-lg'}>
+                                                        <img className="h-32 w-full object-cover object-center" src="https://weds360-production.s3.amazonaws.com/VENDOR_SERVICES/61898cec2c5c8629f4951dcf/webp/large-2092600109bec3b00995810b7ab56aa5.webp" alt="Hoxton House" />
+                                                        <div className="p-2">
+                                                            <h2 className={styles.NewNotableSubHeader + ' tracking-widest text-xs font-medium text-gray-400 mb-1'}>Hoxton House</h2>
+                                                            <h1 className={styles.NewNotableHeader + ' title-font text-xs font-medium'}>Hoxton House</h1>
                                                         </div>
                                                     </div>
                                                 </a>
                                             </div>
                                         </SwiperSlide>
                                         <SwiperSlide>
-                                            <div class="p-4 hover:pointer">
+                                            <div className="p-4 hover:pointer">
                                                 <a target="_blank" href="/en/service/61898cec2c5c8629f4951dcf/hoxton-house">
-                                                    <div class={styles.NewNotableSwiperSlideContainer + ' h-48 border-2 rounded-lg overflow-hidden shadow-md hover:shadow-lg'}>
-                                                        <img class="h-32 w-full object-cover object-center" src="https://weds360-production.s3.amazonaws.com/VENDOR_SERVICES/61898cec2c5c8629f4951dcf/webp/large-2092600109bec3b00995810b7ab56aa5.webp" alt="Hoxton House" />
-                                                        <div class="p-2">
-                                                            <h2 class={styles.NewNotableSubHeader + ' tracking-widest text-xs font-medium text-gray-400 mb-1'}>Hoxton House</h2>
-                                                            <h1 class={styles.NewNotableHeader + ' title-font text-xs font-medium'}>Hoxton House</h1>
+                                                    <div className={styles.NewNotableSwiperSlideContainer + ' h-48 border-2 rounded-lg overflow-hidden shadow-md hover:shadow-lg'}>
+                                                        <img className="h-32 w-full object-cover object-center" src="https://weds360-production.s3.amazonaws.com/VENDOR_SERVICES/61898cec2c5c8629f4951dcf/webp/large-2092600109bec3b00995810b7ab56aa5.webp" alt="Hoxton House" />
+                                                        <div className="p-2">
+                                                            <h2 className={styles.NewNotableSubHeader + ' tracking-widest text-xs font-medium text-gray-400 mb-1'}>Hoxton House</h2>
+                                                            <h1 className={styles.NewNotableHeader + ' title-font text-xs font-medium'}>Hoxton House</h1>
                                                         </div>
                                                     </div>
                                                 </a>
                                             </div>
                                         </SwiperSlide>
                                         <SwiperSlide>
-                                            <div class="p-4 hover:pointer">
+                                            <div className="p-4 hover:pointer">
                                                 <a target="_blank" href="/en/service/61898cec2c5c8629f4951dcf/hoxton-house">
-                                                    <div class={styles.NewNotableSwiperSlideContainer + ' h-48 border-2 rounded-lg overflow-hidden shadow-md hover:shadow-lg'}>
-                                                        <img class="h-32 w-full object-cover object-center" src="https://weds360-production.s3.amazonaws.com/VENDOR_SERVICES/61898cec2c5c8629f4951dcf/webp/large-2092600109bec3b00995810b7ab56aa5.webp" alt="Hoxton House" />
-                                                        <div class="p-2">
-                                                            <h2 class={styles.NewNotableSubHeader + ' tracking-widest text-xs font-medium text-gray-400 mb-1'}>Hoxton House</h2>
-                                                            <h1 class={styles.NewNotableHeader + ' title-font text-xs font-medium'}>Hoxton House</h1>
+                                                    <div className={styles.NewNotableSwiperSlideContainer + ' h-48 border-2 rounded-lg overflow-hidden shadow-md hover:shadow-lg'}>
+                                                        <img className="h-32 w-full object-cover object-center" src="https://weds360-production.s3.amazonaws.com/VENDOR_SERVICES/61898cec2c5c8629f4951dcf/webp/large-2092600109bec3b00995810b7ab56aa5.webp" alt="Hoxton House" />
+                                                        <div className="p-2">
+                                                            <h2 className={styles.NewNotableSubHeader + ' tracking-widest text-xs font-medium text-gray-400 mb-1'}>Hoxton House</h2>
+                                                            <h1 className={styles.NewNotableHeader + ' title-font text-xs font-medium'}>Hoxton House</h1>
                                                         </div>
                                                     </div>
                                                 </a>
                                             </div>
                                         </SwiperSlide>
                                         <SwiperSlide>
-                                            <div class="p-4 hover:pointer">
+                                            <div className="p-4 hover:pointer">
                                                 <a target="_blank" href="/en/service/61898cec2c5c8629f4951dcf/hoxton-house">
-                                                    <div class={styles.NewNotableSwiperSlideContainer + ' h-48 border-2 rounded-lg overflow-hidden shadow-md hover:shadow-lg'}>
-                                                        <img class="h-32 w-full object-cover object-center" src="https://weds360-production.s3.amazonaws.com/VENDOR_SERVICES/61898cec2c5c8629f4951dcf/webp/large-2092600109bec3b00995810b7ab56aa5.webp" alt="Hoxton House" />
-                                                        <div class="p-2">
-                                                            <h2 class={styles.NewNotableSubHeader + ' tracking-widest text-xs font-medium text-gray-400 mb-1'}>Hoxton House</h2>
-                                                            <h1 class={styles.NewNotableHeader + ' title-font text-xs font-medium'}>Hoxton House</h1>
+                                                    <div className={styles.NewNotableSwiperSlideContainer + ' h-48 border-2 rounded-lg overflow-hidden shadow-md hover:shadow-lg'}>
+                                                        <img className="h-32 w-full object-cover object-center" src="https://weds360-production.s3.amazonaws.com/VENDOR_SERVICES/61898cec2c5c8629f4951dcf/webp/large-2092600109bec3b00995810b7ab56aa5.webp" alt="Hoxton House" />
+                                                        <div className="p-2">
+                                                            <h2 className={styles.NewNotableSubHeader + ' tracking-widest text-xs font-medium text-gray-400 mb-1'}>Hoxton House</h2>
+                                                            <h1 className={styles.NewNotableHeader + ' title-font text-xs font-medium'}>Hoxton House</h1>
                                                         </div>
                                                     </div>
                                                 </a>
                                             </div>
                                         </SwiperSlide>
                                         <SwiperSlide>
-                                            <div class="p-4 hover:pointer">
+                                            <div className="p-4 hover:pointer">
                                                 <a target="_blank" href="/en/service/61898cec2c5c8629f4951dcf/hoxton-house">
-                                                    <div class={styles.NewNotableSwiperSlideContainer + ' h-48 border-2 rounded-lg overflow-hidden shadow-md hover:shadow-lg'}>
-                                                        <img class="h-32 w-full object-cover object-center" src="https://weds360-production.s3.amazonaws.com/VENDOR_SERVICES/61898cec2c5c8629f4951dcf/webp/large-2092600109bec3b00995810b7ab56aa5.webp" alt="Hoxton House" />
-                                                        <div class="p-2">
-                                                            <h2 class={styles.NewNotableSubHeader + ' tracking-widest text-xs font-medium text-gray-400 mb-1'}>Hoxton House</h2>
-                                                            <h1 class={styles.NewNotableHeader + ' title-font text-xs font-medium'}>Hoxton House</h1>
+                                                    <div className={styles.NewNotableSwiperSlideContainer + ' h-48 border-2 rounded-lg overflow-hidden shadow-md hover:shadow-lg'}>
+                                                        <img className="h-32 w-full object-cover object-center" src="https://weds360-production.s3.amazonaws.com/VENDOR_SERVICES/61898cec2c5c8629f4951dcf/webp/large-2092600109bec3b00995810b7ab56aa5.webp" alt="Hoxton House" />
+                                                        <div className="p-2">
+                                                            <h2 className={styles.NewNotableSubHeader + ' tracking-widest text-xs font-medium text-gray-400 mb-1'}>Hoxton House</h2>
+                                                            <h1 className={styles.NewNotableHeader + ' title-font text-xs font-medium'}>Hoxton House</h1>
                                                         </div>
                                                     </div>
                                                 </a>
                                             </div>
                                         </SwiperSlide>
                                         <SwiperSlide>
-                                            <div class="p-4 hover:pointer">
+                                            <div className="p-4 hover:pointer">
                                                 <a target="_blank" href="/en/service/61898cec2c5c8629f4951dcf/hoxton-house">
-                                                    <div class={styles.NewNotableSwiperSlideContainer + ' h-48 border-2 rounded-lg overflow-hidden shadow-md hover:shadow-lg'}>
-                                                        <img class="h-32 w-full object-cover object-center" src="https://weds360-production.s3.amazonaws.com/VENDOR_SERVICES/61898cec2c5c8629f4951dcf/webp/large-2092600109bec3b00995810b7ab56aa5.webp" alt="Hoxton House" />
-                                                        <div class="p-2">
-                                                            <h2 class={styles.NewNotableSubHeader + ' tracking-widest text-xs font-medium text-gray-400 mb-1'}>Hoxton House</h2>
-                                                            <h1 class={styles.NewNotableHeader + ' title-font text-xs font-medium'}>Hoxton House</h1>
+                                                    <div className={styles.NewNotableSwiperSlideContainer + ' h-48 border-2 rounded-lg overflow-hidden shadow-md hover:shadow-lg'}>
+                                                        <img className="h-32 w-full object-cover object-center" src="https://weds360-production.s3.amazonaws.com/VENDOR_SERVICES/61898cec2c5c8629f4951dcf/webp/large-2092600109bec3b00995810b7ab56aa5.webp" alt="Hoxton House" />
+                                                        <div className="p-2">
+                                                            <h2 className={styles.NewNotableSubHeader + ' tracking-widest text-xs font-medium text-gray-400 mb-1'}>Hoxton House</h2>
+                                                            <h1 className={styles.NewNotableHeader + ' title-font text-xs font-medium'}>Hoxton House</h1>
                                                         </div>
                                                     </div>
                                                 </a>
                                             </div>
                                         </SwiperSlide>
                                         <SwiperSlide>
-                                            <div class="p-4 hover:pointer">
+                                            <div className="p-4 hover:pointer">
                                                 <a target="_blank" href="/en/service/61898cec2c5c8629f4951dcf/hoxton-house">
-                                                    <div class={styles.NewNotableSwiperSlideContainer + ' h-48 border-2 rounded-lg overflow-hidden shadow-md hover:shadow-lg'}>
-                                                        <img class="h-32 w-full object-cover object-center" src="https://weds360-production.s3.amazonaws.com/VENDOR_SERVICES/61898cec2c5c8629f4951dcf/webp/large-2092600109bec3b00995810b7ab56aa5.webp" alt="Hoxton House" />
-                                                        <div class="p-2">
-                                                            <h2 class={styles.NewNotableSubHeader + ' tracking-widest text-xs font-medium text-gray-400 mb-1'}>Hoxton House</h2>
-                                                            <h1 class={styles.NewNotableHeader + ' title-font text-xs font-medium'}>Hoxton House</h1>
+                                                    <div className={styles.NewNotableSwiperSlideContainer + ' h-48 border-2 rounded-lg overflow-hidden shadow-md hover:shadow-lg'}>
+                                                        <img className="h-32 w-full object-cover object-center" src="https://weds360-production.s3.amazonaws.com/VENDOR_SERVICES/61898cec2c5c8629f4951dcf/webp/large-2092600109bec3b00995810b7ab56aa5.webp" alt="Hoxton House" />
+                                                        <div className="p-2">
+                                                            <h2 className={styles.NewNotableSubHeader + ' tracking-widest text-xs font-medium text-gray-400 mb-1'}>Hoxton House</h2>
+                                                            <h1 className={styles.NewNotableHeader + ' title-font text-xs font-medium'}>Hoxton House</h1>
                                                         </div>
                                                     </div>
                                                 </a>
                                             </div>
                                         </SwiperSlide>
                                         <SwiperSlide>
-                                            <div class="p-4 hover:pointer">
+                                            <div className="p-4 hover:pointer">
                                                 <a target="_blank" href="/en/service/61898cec2c5c8629f4951dcf/hoxton-house">
-                                                    <div class={styles.NewNotableSwiperSlideContainer + ' h-48 border-2 rounded-lg overflow-hidden shadow-md hover:shadow-lg'}>
-                                                        <img class="h-32 w-full object-cover object-center" src="https://weds360-production.s3.amazonaws.com/VENDOR_SERVICES/61898cec2c5c8629f4951dcf/webp/large-2092600109bec3b00995810b7ab56aa5.webp" alt="Hoxton House" />
-                                                        <div class="p-2">
-                                                            <h2 class={styles.NewNotableSubHeader + ' tracking-widest text-xs font-medium text-gray-400 mb-1'}>Hoxton House</h2>
-                                                            <h1 class={styles.NewNotableHeader + ' title-font text-xs font-medium'}>Hoxton House</h1>
+                                                    <div className={styles.NewNotableSwiperSlideContainer + ' h-48 border-2 rounded-lg overflow-hidden shadow-md hover:shadow-lg'}>
+                                                        <img className="h-32 w-full object-cover object-center" src="https://weds360-production.s3.amazonaws.com/VENDOR_SERVICES/61898cec2c5c8629f4951dcf/webp/large-2092600109bec3b00995810b7ab56aa5.webp" alt="Hoxton House" />
+                                                        <div className="p-2">
+                                                            <h2 className={styles.NewNotableSubHeader + ' tracking-widest text-xs font-medium text-gray-400 mb-1'}>Hoxton House</h2>
+                                                            <h1 className={styles.NewNotableHeader + ' title-font text-xs font-medium'}>Hoxton House</h1>
                                                         </div>
                                                     </div>
                                                 </a>
                                             </div>
                                         </SwiperSlide>
                                         <SwiperSlide>
-                                            <div class="p-4 hover:pointer">
+                                            <div className="p-4 hover:pointer">
                                                 <a target="_blank" href="/en/service/61898cec2c5c8629f4951dcf/hoxton-house">
-                                                    <div class={styles.NewNotableSwiperSlideContainer + ' h-48 border-2 rounded-lg overflow-hidden shadow-md hover:shadow-lg'}>
-                                                        <img class="h-32 w-full object-cover object-center" src="https://weds360-production.s3.amazonaws.com/VENDOR_SERVICES/61898cec2c5c8629f4951dcf/webp/large-2092600109bec3b00995810b7ab56aa5.webp" alt="Hoxton House" />
-                                                        <div class="p-2">
-                                                            <h2 class={styles.NewNotableSubHeader + ' tracking-widest text-xs font-medium text-gray-400 mb-1'}>Hoxton House</h2>
-                                                            <h1 class={styles.NewNotableHeader + ' title-font text-xs font-medium'}>Hoxton House</h1>
+                                                    <div className={styles.NewNotableSwiperSlideContainer + ' h-48 border-2 rounded-lg overflow-hidden shadow-md hover:shadow-lg'}>
+                                                        <img className="h-32 w-full object-cover object-center" src="https://weds360-production.s3.amazonaws.com/VENDOR_SERVICES/61898cec2c5c8629f4951dcf/webp/large-2092600109bec3b00995810b7ab56aa5.webp" alt="Hoxton House" />
+                                                        <div className="p-2">
+                                                            <h2 className={styles.NewNotableSubHeader + ' tracking-widest text-xs font-medium text-gray-400 mb-1'}>Hoxton House</h2>
+                                                            <h1 className={styles.NewNotableHeader + ' title-font text-xs font-medium'}>Hoxton House</h1>
                                                         </div>
                                                     </div>
                                                 </a>
                                             </div>
                                         </SwiperSlide>
                                         <SwiperSlide>
-                                            <div class="p-4 hover:pointer">
+                                            <div className="p-4 hover:pointer">
                                                 <a target="_blank" href="/en/service/61898cec2c5c8629f4951dcf/hoxton-house">
-                                                    <div class={styles.NewNotableSwiperSlideContainer + ' h-48 border-2 rounded-lg overflow-hidden shadow-md hover:shadow-lg'}>
-                                                        <img class="h-32 w-full object-cover object-center" src="https://weds360-production.s3.amazonaws.com/VENDOR_SERVICES/61898cec2c5c8629f4951dcf/webp/large-2092600109bec3b00995810b7ab56aa5.webp" alt="Hoxton House" />
-                                                        <div class="p-2">
-                                                            <h2 class={styles.NewNotableSubHeader + ' tracking-widest text-xs font-medium text-gray-400 mb-1'}>Hoxton House</h2>
-                                                            <h1 class={styles.NewNotableHeader + ' title-font text-xs font-medium'}>Hoxton House</h1>
+                                                    <div className={styles.NewNotableSwiperSlideContainer + ' h-48 border-2 rounded-lg overflow-hidden shadow-md hover:shadow-lg'}>
+                                                        <img className="h-32 w-full object-cover object-center" src="https://weds360-production.s3.amazonaws.com/VENDOR_SERVICES/61898cec2c5c8629f4951dcf/webp/large-2092600109bec3b00995810b7ab56aa5.webp" alt="Hoxton House" />
+                                                        <div className="p-2">
+                                                            <h2 className={styles.NewNotableSubHeader + ' tracking-widest text-xs font-medium text-gray-400 mb-1'}>Hoxton House</h2>
+                                                            <h1 className={styles.NewNotableHeader + ' title-font text-xs font-medium'}>Hoxton House</h1>
                                                         </div>
                                                     </div>
                                                 </a>
                                             </div>
                                         </SwiperSlide>
                                         <SwiperSlide>
-                                            <div class="p-4 hover:pointer">
+                                            <div className="p-4 hover:pointer">
                                                 <a target="_blank" href="/en/service/61898cec2c5c8629f4951dcf/hoxton-house">
-                                                    <div class={styles.NewNotableSwiperSlideContainer + ' h-48 border-2 rounded-lg overflow-hidden shadow-md hover:shadow-lg'}>
-                                                        <img class="h-32 w-full object-cover object-center" src="https://weds360-production.s3.amazonaws.com/VENDOR_SERVICES/61898cec2c5c8629f4951dcf/webp/large-2092600109bec3b00995810b7ab56aa5.webp" alt="Hoxton House" />
-                                                        <div class="p-2">
-                                                            <h2 class={styles.NewNotableSubHeader + ' tracking-widest text-xs font-medium text-gray-400 mb-1'}>Hoxton House</h2>
-                                                            <h1 class={styles.NewNotableHeader + ' title-font text-xs font-medium'}>Hoxton House</h1>
+                                                    <div className={styles.NewNotableSwiperSlideContainer + ' h-48 border-2 rounded-lg overflow-hidden shadow-md hover:shadow-lg'}>
+                                                        <img className="h-32 w-full object-cover object-center" src="https://weds360-production.s3.amazonaws.com/VENDOR_SERVICES/61898cec2c5c8629f4951dcf/webp/large-2092600109bec3b00995810b7ab56aa5.webp" alt="Hoxton House" />
+                                                        <div className="p-2">
+                                                            <h2 className={styles.NewNotableSubHeader + ' tracking-widest text-xs font-medium text-gray-400 mb-1'}>Hoxton House</h2>
+                                                            <h1 className={styles.NewNotableHeader + ' title-font text-xs font-medium'}>Hoxton House</h1>
                                                         </div>
                                                     </div>
                                                 </a>
                                             </div>
                                         </SwiperSlide>
                                         <SwiperSlide>
-                                            <div class="p-4 hover:pointer">
+                                            <div className="p-4 hover:pointer">
                                                 <a target="_blank" href="/en/service/61898cec2c5c8629f4951dcf/hoxton-house">
-                                                    <div class={styles.NewNotableSwiperSlideContainer + ' h-48 border-2 rounded-lg overflow-hidden shadow-md hover:shadow-lg'}>
-                                                        <img class="h-32 w-full object-cover object-center" src="https://weds360-production.s3.amazonaws.com/VENDOR_SERVICES/61898cec2c5c8629f4951dcf/webp/large-2092600109bec3b00995810b7ab56aa5.webp" alt="Hoxton House" />
-                                                        <div class="p-2">
-                                                            <h2 class={styles.NewNotableSubHeader + ' tracking-widest text-xs font-medium text-gray-400 mb-1'}>Hoxton House</h2>
-                                                            <h1 class={styles.NewNotableHeader + ' title-font text-xs font-medium'}>Hoxton House</h1>
+                                                    <div className={styles.NewNotableSwiperSlideContainer + ' h-48 border-2 rounded-lg overflow-hidden shadow-md hover:shadow-lg'}>
+                                                        <img className="h-32 w-full object-cover object-center" src="https://weds360-production.s3.amazonaws.com/VENDOR_SERVICES/61898cec2c5c8629f4951dcf/webp/large-2092600109bec3b00995810b7ab56aa5.webp" alt="Hoxton House" />
+                                                        <div className="p-2">
+                                                            <h2 className={styles.NewNotableSubHeader + ' tracking-widest text-xs font-medium text-gray-400 mb-1'}>Hoxton House</h2>
+                                                            <h1 className={styles.NewNotableHeader + ' title-font text-xs font-medium'}>Hoxton House</h1>
                                                         </div>
                                                     </div>
                                                 </a>

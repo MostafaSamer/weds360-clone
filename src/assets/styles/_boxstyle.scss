@@ -16,6 +16,10 @@
     padding-bottom: 1.25rem !important;
 }
 
+.pb-4 {
+    padding-bottom: 1rem !important;
+}
+
 .py-10 {
     padding-top: 2.5rem !important;
     padding-bottom: 2.5rem !important;
@@ -98,6 +102,10 @@
     margin-top: 0.5rem !important;
 }
 
+.mt-1 {
+    margin-top: 0.25rem !important;
+}
+
 .mb-6 {
     margin-bottom: 1.5rem !important;
 }
@@ -143,6 +151,11 @@
 
 .ml-0 {
     margin-left: 0 !important;
+}
+
+.mx-7 {
+    margin-left: 1.75rem !important;
+    margin-right: 1.75rem !important;
 }
 
 .mx-3 {
@@ -430,4 +443,32 @@
     font-size: 1rem;
     line-height: 1.5;
     letter-spacing: 0.00938em;
+}
+
+.flex-shrink-0 {
+    flex-shrink: 0;
+}
+
+.justify-end {
+    justify-content: flex-end;
+}
+
+.rounded-md {
+    border-radius: 0.375rem;
+}
+
+.items-stretch {
+    align-items: stretch;
+}
+
+.flex-grow {
+    flex-grow: 1;
+}
+
+.flex-row {
+    flex-direction: row;
+}
+
+.gap-3 {
+    gap: 0.75rem;
 }

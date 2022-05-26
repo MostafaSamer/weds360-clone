@@ -43,3 +43,14 @@ img, video {
 input[type="text" i] {
     padding: 0.5rem 0.75rem;
 }
+
+button {
+    background-color: transparent;
+    background-image: none;
+}
+
+*, :after, :before {
+    border-color: rgba(229, 231, 235, 1);
+    box-sizing: border-box;
+    border: 0 solid;
+}

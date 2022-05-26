@@ -52,6 +52,10 @@
     padding-left: 0.75rem !important;
 }
 
+.pr-2 {
+    padding-right: 0.5rem !important;
+}
+
 .px-auto {
     padding-left: auto !important;
     padding-right: auto !important;
@@ -87,10 +91,6 @@
 
 .p-2 {
     padding: 0.5rem !important;
-}
-
-.p-2 {
-    padding: 0.25rem !important;
 }
 
 // Margins
@@ -388,7 +388,7 @@
     width: 1.5rem !important;
 }
 
-.h-6 {
+.w-6 {
     width: 1.5rem !important;
 }
 

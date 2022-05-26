@@ -17,7 +17,7 @@ function NewNotable() {
                                 <Swiper
                                         className={styles.mySwiper}
                                         spaceBetween={10}
-                                        slidesPerView={6}
+                                        slidesPerView={8}
                                         autoPlay={true}
                                         >
                                         <SwiperSlide>

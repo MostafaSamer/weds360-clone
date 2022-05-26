@@ -49,9 +49,18 @@
     margin-left: auto;
     margin-right: auto;
 
+    .NavBarMenuButton:hover {
+        font-weight: 600;
+    }
+
     .NavBarMenuDrop {
         box-shadow: var(--tw-ring-offset-shadow,0 0 transparent),var(--tw-ring-shadow,0 0 transparent),var(--tw-shadow);
         color: rgba(55, 65, 81, 1);
+        box-shadow: 0 10px 15px -3px rgb(0 0 0 / 10%), 0 4px 6px -4px rgb(0 0 0 / 10%);
+        border-radius: 10px;
+        background: #fff;
+        margin-top: 17px;
+        margin-left: -104px;
 
         .NavBarMenuDropText {
             cursor: pointer;

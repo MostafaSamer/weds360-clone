@@ -1,36 +1,29 @@
 import React from 'react';
 import './App.scss';
+
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
+
 import '../src/assets/styles/global.scss'
 
 import Navbar from "./app/components/navbar/navbar"
-import TreeView from "./app/components/treeview/treeview"
-import PhotoSearch from './app/components/photosearch/photosearch';
-import FeaturedVendors from './app/components/featuredvendors/featuredvendors';
 import Footer from "./app/components/footer/footer"
-import NewNotable from './app/components/newandnotable/newandnotable';
+import Home from './app/pages/home';
+import SingilePhoto from './app/pages/singlephoto';
 
 function App() {
   return (
-    <div className="App">
-      <div>
-        <Navbar />
+    <Router>
+      <div className="App">
         <div>
-          <div>
-            <div>
-              <TreeView element={[
-                {name: "Galary", state: "https://weds360.com/en/moreWeddings/"},
-                {name: "Wedding Ideas", state: "#"}
-              ]} />
-
-              <PhotoSearch />
-            </div>
-            <FeaturedVendors />
-            <NewNotable />
-          </div>
+          <Navbar />
+          <Routes>
+            <Route exact path="/" element={<Home />} />
+            <Route exact path="/photo/:id" element={<SingilePhoto />} />
+          </Routes>
+          <Footer />
         </div>
-        <Footer />
       </div>
-    </div>
+    </Router>
   );
 }
 

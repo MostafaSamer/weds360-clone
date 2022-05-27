@@ -8,6 +8,7 @@ import '../src/assets/styles/global.scss'
 import Navbar from "./app/components/navbar/navbar"
 import Footer from "./app/components/footer/footer"
 import Home from './app/pages/home';
+import Category from './app/pages/category';
 import SingilePhoto from './app/pages/singlephoto';
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
           <Navbar />
           <Routes>
             <Route exact path="/" element={<Home />} />
+            <Route exact path="/category/:id" element={<Category />} />
             <Route exact path="/photo/:id" element={<SingilePhoto />} />
           </Routes>
           <Footer />

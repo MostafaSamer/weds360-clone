@@ -1,9 +1,18 @@
+import { useEffect } from "react";
+import { useParams } from "react-router-dom";
 import FeaturedVendors from "../components/featuredvendors/featuredvendors";
 import NewNotable from "../components/newandnotable/newandnotable";
 import PhotoSearch from "../components/photosearch/photosearch";
 import TreeView from "../components/treeview/treeview";
 
-function Home() {
+function Category() {
+
+    const { id } = useParams();
+
+    useEffect(() => {
+        console.log(id)
+    }, [id])
+
     return (
         <div>
             <div>
@@ -12,7 +21,7 @@ function Home() {
                         { name: "All", state: "https://weds360.com/" }
                     ]} />
 
-                    <PhotoSearch />
+                    {id && <PhotoSearch category={true}/>}
                 </div>
                 <FeaturedVendors />
                 <NewNotable />
@@ -21,4 +30,4 @@ function Home() {
     )
 }
 
-export default Home;
+export default Category;

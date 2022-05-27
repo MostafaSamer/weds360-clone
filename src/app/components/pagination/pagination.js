@@ -12,11 +12,11 @@ function Pagination({ PageNumbers, selected, changePage }) {
             .map(el => el+1)
             .filter((el) => {
                 return (
-                    el == 1 ||
-                    el == selected ||
-                    el == (selected-1) ||
-                    el == (selected+1) ||
-                    el == PageNumbers
+                    el === 1 ||
+                    el === selected ||
+                    el === (selected-1) ||
+                    el === (selected+1) ||
+                    el === PageNumbers
                 )
             })
             .map((el, index, arr) => {
@@ -25,8 +25,8 @@ function Pagination({ PageNumbers, selected, changePage }) {
                         <li onClick={() => { changePage(el) }}>
                             <a role="button" className={"p-2 m-1 lg:m-2 rounded cursor-pointer shadow-md hover:shadow-lg " + (selected === el? styles.SelectedPage : '')} tabIndex="0" aria-label={"Page " + el}>{el}</a>
                         </li>
-                        {((el == 1 && selected - 1 > 2) ||
-                         (el - selected == 1 && PageNumbers - el > 1)) && <li className="break"><a role="button" tabindex="0">...</a></li>}
+                        {((el === 1 && selected - 1 > 2) ||
+                         (el - selected === 1 && PageNumbers - el > 1)) && <li className="break"><a role="button" tabindex="0">...</a></li>}
                     </>
                 )
             })}

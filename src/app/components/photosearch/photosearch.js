@@ -4,9 +4,9 @@ import PhotoGrid from "../photogrid/photogrid"
 import PhotoCard from "../photocard/photocard"
 import BtnPrimary from "../btn-primary/btn-primary"
 import Pagination from "../pagination/pagination"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 
-function PhotoSearch() {
+function PhotoSearch({ category }) {
 
     const [currentPage, SetCurrentPage] = useState(1);
 
@@ -23,6 +23,10 @@ function PhotoSearch() {
         SetCurrentPage(pageNumber)
 
     }
+
+    useEffect(() => {
+        console.log(category);
+    }, [category])
 
     return (
         <div className="lg:flex lg:flex-row lg:w-11/12 lg:mx-auto">

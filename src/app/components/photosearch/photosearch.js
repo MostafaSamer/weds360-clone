@@ -12,6 +12,8 @@ function PhotoSearch({ data }) {
 
     const [currentPage, SetCurrentPage] = useState(1);
 
+    console.log(data.length)
+
     const onSearchClick = (e) => {
         console.log(e)
     }
@@ -72,7 +74,7 @@ function PhotoSearch({ data }) {
                         }
                     </PhotoGrid>
 
-                    <Pagination PageNumbers={data.length / 6} selected={currentPage} changePage={onChangePage} />
+                    <Pagination PageNumbers={Math.ceil(data.length / 6)} selected={currentPage} changePage={onChangePage} />
                 </section>
             </div>
         </div>

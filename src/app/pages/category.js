@@ -5,12 +5,18 @@ import NewNotable from "../components/newandnotable/newandnotable";
 import PhotoSearch from "../components/photosearch/photosearch";
 import TreeView from "../components/treeview/treeview";
 
+import { useDispatch, useSelector } from 'react-redux';
+import { getImagesFetch } from '../../actions';
+
 function Category() {
+
+    const dispatch = useDispatch();
+    const images = useSelector(state => state.imageReducer.images);
 
     const { id } = useParams();
 
     useEffect(() => {
-        console.log(id)
+        dispatch(getImagesFetch());
     }, [id])
 
     return (
@@ -22,7 +28,7 @@ function Category() {
 
                     ]} />
 
-                    {/* {id && <PhotoSearch category={photos}/>} */}
+                    {id && <PhotoSearch data={images}/>}
                 </div>
                 <FeaturedVendors />
                 <NewNotable />

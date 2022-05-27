@@ -1,4 +1,13 @@
-import { GET_CATEGORIES_SUCCESS, GET_VENDORD_SUCCESS, GET_NOTABLE_SUCCESS } from './actions';
+import { GET_IMAGES_SUCCESS, GET_CATEGORIES_SUCCESS, GET_VENDORD_SUCCESS, GET_NOTABLE_SUCCESS } from './actions';
+
+const imageReducer = (state = { images: [] }, action) => {
+    switch (action.type) {
+        case GET_IMAGES_SUCCESS:
+            return { ...state, images: action.images}
+        default:
+            return state;
+    }
+}
 
 const categoriesReducer = (state = { categories: [] }, action) => {
     switch (action.type) {
@@ -28,6 +37,7 @@ const notableReducer = (state = { notables: [] }, action) => {
 }
 
 export default {
+    imageReducer,
     categoriesReducer,
     vendorsReducer,
     notableReducer

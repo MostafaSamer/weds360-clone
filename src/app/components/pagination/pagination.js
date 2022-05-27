@@ -19,7 +19,7 @@ function Pagination({ PageNumbers, selected, changePage }) {
                     el === PageNumbers
                 )
             })
-            .map((el, index, arr) => {
+            .map((el) => {
                 return (
                     <>
                         <li onClick={() => { changePage(el) }}>

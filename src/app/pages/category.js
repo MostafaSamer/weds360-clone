@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import FeaturedVendors from "../components/featuredvendors/featuredvendors";
 import NewNotable from "../components/newandnotable/newandnotable";
@@ -12,12 +12,17 @@ function Category() {
 
     const dispatch = useDispatch();
     const images = useSelector(state => state.imageReducer.images);
-    console.log({images})
+
+    const [imagesCat, SetImagesCat] = useState([]);
 
     const { id } = useParams();
 
     useEffect(() => {
         dispatch(getImagesFetch());
+        SetImagesCat(
+            images
+            .filter(image => image.category == id)
+        )
     }, [id])
 
     return (
@@ -29,7 +34,7 @@ function Category() {
 
                     ]} />
 
-                    {id && <PhotoSearch data={images}/>}
+                    {id && <PhotoSearch data={imagesCat}/>}
                 </div>
                 <FeaturedVendors />
                 <NewNotable />

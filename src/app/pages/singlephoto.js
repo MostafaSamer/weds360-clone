@@ -1,6 +1,7 @@
 import FeaturedVendors from "../components/featuredvendors/featuredvendors";
 import NewNotable from "../components/newandnotable/newandnotable";
 import PhotoDetails from "../components/photodetails/photodetails";
+import RelatedPhoto from "../components/relatedphoto/relatedphoto";
 import TreeView from "../components/treeview/treeview";
 
 function SingilePhoto() {
@@ -17,7 +18,7 @@ function SingilePhoto() {
                     <div className="container px-5 mx-auto">
                         <div className="lg:w-4/5 py-5 mx-auto flex flex-wrap">
                             <PhotoDetails />
-                            {/* Related Photo */}
+                            <RelatedPhoto />
                         </div>
                     </div>
                 </div>

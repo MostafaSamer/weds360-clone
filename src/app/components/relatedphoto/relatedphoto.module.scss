@@ -1,0 +1,21 @@
+.RelatedPhotoHeader {
+    color: rgba(17, 24, 39, 1);
+    font-weight: 500;
+}
+
+.RelatedPhotoSection {
+
+    .RelatedPhotoContainer {
+        border-color: rgba(229, 231, 235, 0.6);
+
+        .RelatedPhotoHeader {
+            font-weight: 500 !important;
+            color: rgba(156, 163, 175, 1);
+        }
+
+        .RelatedPhotoSubHeader {
+            font-weight: 500 !important;
+            color: rgba(17, 24, 39, 1);
+        }
+    }
+}

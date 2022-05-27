@@ -85,6 +85,10 @@
     padding-right: 0.5rem !important;
 }
 
+.p-6 {
+    padding: 1.5rem !important;
+}
+
 .p-5 {
     padding: 1.25rem !important;
 }
@@ -105,6 +109,10 @@
 
 .mt-6 {
     margin-top: 1.5rem !important;
+}
+
+.mt-10 {
+    margin-top: 2.5rem !important;
 }
 
 .mt-5 {
@@ -137,6 +145,10 @@
 
 .mb-4 {
     margin-bottom: 1rem !important;
+}
+
+.mb-3 {
+    margin-bottom: 0.75rem !important;
 }
 
 .mb-2 {
@@ -560,4 +572,13 @@
 
 .h-12 {
     width: 3rem !important;
+}
+
+.truncate, .whitespace-nowrap {
+    white-space: nowrap;
+}
+
+.truncate {
+    overflow: hidden;
+    text-overflow: ellipsis;
 }

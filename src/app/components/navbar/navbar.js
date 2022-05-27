@@ -1,26 +1,34 @@
 import { useState } from 'react';
 import styles from './navbar.module.scss';
+import {
+    Accordion,
+    AccordionItem,
+    AccordionItemHeading,
+    AccordionItemButton,
+    AccordionItemPanel,
+} from 'react-accessible-accordion';
+import 'react-accessible-accordion/dist/fancy-example.css';
 
 function Navbar() {
-    const [dropdownStyle, setDropdownStyle] = useState({display: 'none'});
-    const [mobileNavStyle, setMobileNavStyle] = useState({display: 'none'});
+    const [dropdownStyle, setDropdownStyle] = useState({ display: 'none' });
+    const [mobileNavStyle, setMobileNavStyle] = useState({ display: 'none' });
 
     const ChangeMenuStyle = () => {
         setMobileNavStyle(
-            mobileNavStyle.display == 'none'?
-            {display: 'block'} :
-            {display: 'none'}
+            mobileNavStyle.display == 'none' ?
+                { display: 'block' } :
+                { display: 'none' }
         )
     }
 
     return (
-        <div className='sticky top-0 left-0 right-0 pb-8' style={{"zIndex": 1000000}}>
+        <div className='sticky top-0 left-0 right-0 pb-8' style={{ "zIndex": 1000000 }}>
             <div>
                 <nav className={styles.NavbarNav + ' px-2 sm:px-4 py-2.5 rounded'}>
                     <div className='container flex flex-wrap items-center mx-auto lg:w-11/12'>
                         <a className='flex' href="/en">
                             <span className='self-center text-lg font-semibold whitespace-nowrap md:mt-5'>
-                                <img className="h-6 xl:h-16 w-auto 2xl:mr-20" src="https://weds360.com/logo.png" alt="Workflow" style={{marginLeft: "10px"}} />
+                                <img className="h-6 xl:h-16 w-auto 2xl:mr-20" src="https://weds360.com/logo.png" alt="Workflow" style={{ marginLeft: "10px" }} />
                             </span>
                         </a>
                         <div className='flex items-center md:order-3 mx-auto'>
@@ -35,9 +43,9 @@ function Navbar() {
                                 <a href="/en/Login">
                                     <i className="fas fa fa-user-plus step11"></i>
                                 </a>
-                                
+
                                 <i className='mx-1'></i>
-                                <button className={styles.NavbarLanguage + ' ml-7 absolute flex items-center mx-2 text-sm rounded-full text-gray-600 hover:text-gray-500'} style={{color: "rgb(2, 77, 76)"}}>
+                                <button className={styles.NavbarLanguage + ' ml-7 absolute flex items-center mx-2 text-sm rounded-full text-gray-600 hover:text-gray-500'} style={{ color: "rgb(2, 77, 76)" }}>
                                     <i className="mx-1"></i>
                                     <span className={styles.NavbarLanguageText + ' rounded font-semibold text-xs step12'}>ع </span>
                                 </button>
@@ -50,7 +58,7 @@ function Navbar() {
                             </div> */}
                         </div>
                         <div className="flex md:order-2 items-center justify-center mx-auto">
-                            <div className={styles.SearchBar + ' hidden mr-3 md:mr-0 lg:block'} style={{width: "300px"}}>
+                            <div className={styles.SearchBar + ' hidden mr-3 md:mr-0 lg:block'} style={{ width: "300px" }}>
                                 <div className="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
                                     <svg className={styles.searchBarIcon + ' w-5 h-5'} fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clipRule="evenodd"></path></svg>
                                 </div>
@@ -61,25 +69,25 @@ function Navbar() {
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true" className="w-6 h-6 ml-10"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
                             </button>
                         </div>
-                        
-                        <div className={styles.NAvBarMenu + ' justify-between items-center w-full md:flex md:w-auto md:order-1'}  style={mobileNavStyle}>
+
+                        <div className={styles.NAvBarMenu + ' ' + styles.NAvBarMenuWeb + ' justify-between items-center w-full md:flex md:w-auto md:order-1'}>
                             <a className='en' href='https://weds360.com/en/photos'>
                                 <div className='flex flex-col mt-4 md:flex-row md:space-x-2 xl:space-x-2 md:mt-2 md:text-sm md:font-medium mx-3 mb-2 '>
                                     <button
-                                    className={styles.NavBarMenuButton + ' flex mr-3 text-sm rounded-full md:mr-0'}>360 Planner</button>
+                                        className={styles.NavBarMenuButton + ' flex mr-3 text-sm rounded-full md:mr-0'}>360 Planner</button>
                                 </div>
                             </a>
                             <a className='en' href='https://weds360.com/en/photos'>
                                 <div className='flex flex-col mt-4 md:flex-row md:space-x-2 xl:space-x-2 md:mt-2 md:text-sm md:font-medium mx-3 mb-2 '>
                                     <button
-                                    className={styles.NavBarMenuButton + ' flex mr-3 text-sm rounded-full md:mr-0'}
-                                    onMouseEnter={() => { setDropdownStyle({display: 'block'}); }}
-                                    onMouseLeave={() => { setDropdownStyle({display: 'none'}); }}>Dropdown here</button>
+                                        className={styles.NavBarMenuButton + ' flex mr-3 text-sm rounded-full md:mr-0'}
+                                        onMouseEnter={() => { setDropdownStyle({ display: 'block' }); }}
+                                        onMouseLeave={() => { setDropdownStyle({ display: 'none' }); }}>Dropdown here</button>
                                     <div className=' z-50 my-0 text-base list-none bg-white justify-center items-center'>
                                         <ul
-                                        onMouseEnter={() => { setDropdownStyle({display: 'block'}); }}
-                                        onMouseLeave={() => { setDropdownStyle({display: 'none'}); }}
-                                        className={styles.NavBarMenuDrop + ' z-10 absolute'} style={dropdownStyle}>
+                                            onMouseEnter={() => { setDropdownStyle({ display: 'block' }); }}
+                                            onMouseLeave={() => { setDropdownStyle({ display: 'none' }); }}
+                                            className={styles.NavBarMenuDrop + ' z-10 absolute'} style={dropdownStyle}>
                                             <li><a><span className={styles.NavBarMenuDropText + ' block py-2 px-4 font-normal text-sm hover:border-t hover:border-b'}>Check List</span></a></li>
                                             <li><a><span className={styles.NavBarMenuDropText + ' block py-2 px-4 font-normal text-sm hover:border-t hover:border-b'}>Check List</span></a></li>
                                         </ul>
@@ -89,28 +97,86 @@ function Navbar() {
                             <a className='en' href='https://weds360.com/en/photos'>
                                 <div className='flex flex-col mt-4 md:flex-row md:space-x-2 xl:space-x-2 md:mt-2 md:text-sm md:font-medium mx-3 mb-2 '>
                                     <button
-                                    className={styles.NavBarMenuButton + ' flex mr-3 text-sm rounded-full md:mr-0'}>360 Planner</button>
+                                        className={styles.NavBarMenuButton + ' flex mr-3 text-sm rounded-full md:mr-0'}>360 Planner</button>
                                 </div>
                             </a>
                             <a className='en' href='https://weds360.com/en/photos'>
                                 <div className='flex flex-col mt-4 md:flex-row md:space-x-2 xl:space-x-2 md:mt-2 md:text-sm md:font-medium mx-3 mb-2 '>
                                     <button
-                                    className={styles.NavBarMenuButton + ' flex mr-3 text-sm rounded-full md:mr-0'}>360 Planner</button>
+                                        className={styles.NavBarMenuButton + ' flex mr-3 text-sm rounded-full md:mr-0'}>360 Planner</button>
                                 </div>
                             </a>
                             <a className='en' href='https://weds360.com/en/photos'>
                                 <div className='flex flex-col mt-4 md:flex-row md:space-x-2 xl:space-x-2 md:mt-2 md:text-sm md:font-medium mx-3 mb-2 '>
                                     <button
-                                    className={styles.NavBarMenuButton + ' flex mr-3 text-sm rounded-full md:mr-0'}>360 Planner</button>
+                                        className={styles.NavBarMenuButton + ' flex mr-3 text-sm rounded-full md:mr-0'}>360 Planner</button>
                                 </div>
                             </a>
                             <a className='en' href='https://weds360.com/en/photos'>
                                 <div className='flex flex-col mt-4 md:flex-row md:space-x-2 xl:space-x-2 md:mt-2 md:text-sm md:font-medium mx-3 mb-2 '>
                                     <button
-                                    className={styles.NavBarMenuButton + ' flex mr-3 text-sm rounded-full md:mr-0'}>360 Planner</button>
+                                        className={styles.NavBarMenuButton + ' flex mr-3 text-sm rounded-full md:mr-0'}>360 Planner</button>
                                 </div>
                             </a>
-                            {/* ... */}
+                        </div>
+
+                        <div className={styles.NAvBarMenu + ' ' + styles.NAvBarMenuMobile + ' justify-between items-center w-full md:flex md:w-auto md:order-1'} style={mobileNavStyle}>
+                            <Accordion allowZeroExpanded={true}>
+                                <AccordionItem>
+                                    <AccordionItemHeading>
+                                        <AccordionItemButton>
+                                            360 Planner
+                                        </AccordionItemButton>
+                                    </AccordionItemHeading>
+                                </AccordionItem>
+                                <AccordionItem>
+                                    <AccordionItemHeading>
+                                        <AccordionItemButton>
+                                            Dropdown Here
+                                        </AccordionItemButton>
+                                    </AccordionItemHeading>
+                                    <AccordionItemPanel>
+                                        <p>CheckList</p>
+                                    </AccordionItemPanel>
+                                    <AccordionItemPanel>
+                                        <p>CheckList</p>
+                                    </AccordionItemPanel>
+                                    <AccordionItemPanel>
+                                        <p>CheckList</p>
+                                    </AccordionItemPanel>
+                                    <AccordionItemPanel>
+                                        <p>CheckList</p>
+                                    </AccordionItemPanel>
+                                </AccordionItem>
+                                <AccordionItem>
+                                    <AccordionItemHeading>
+                                        <AccordionItemButton>
+                                            360 Planner
+                                        </AccordionItemButton>
+                                    </AccordionItemHeading>
+                                </AccordionItem>
+                                <AccordionItem>
+                                    <AccordionItemHeading>
+                                        <AccordionItemButton>
+                                            360 Planner
+                                        </AccordionItemButton>
+                                    </AccordionItemHeading>
+                                </AccordionItem>
+                                <AccordionItem>
+                                    <AccordionItemHeading>
+                                        <AccordionItemButton>
+                                            360 Planner
+                                        </AccordionItemButton>
+                                    </AccordionItemHeading>
+                                </AccordionItem>
+                                <AccordionItem>
+                                    <AccordionItemHeading>
+                                        <AccordionItemButton>
+                                            360 Planner
+                                        </AccordionItemButton>
+                                    </AccordionItemHeading>
+                                </AccordionItem>
+                            </Accordion>
                         </div>
                     </div>
                 </nav>

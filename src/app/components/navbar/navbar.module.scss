@@ -75,3 +75,11 @@
         }
     }
 }
+
+.NAvBarMenuWeb { display: none !important; }
+.NAvBarMenuMobile { display: block !important; }
+
+@media (min-width: 768px) {
+    .NAvBarMenuWeb { display: flex !important; }
+    .NAvBarMenuMobile { display: none !important; }
+}

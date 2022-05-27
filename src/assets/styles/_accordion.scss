@@ -1,0 +1,15 @@
+.accordion__button {
+    background-color: var(--wed-white) !important;
+
+    &:hover {
+        background-color: #ddd;
+    }
+}
+
+.accordion__item + .accordion__item {
+    border: none !important;
+}
+
+.accordion {
+    border: none !important;
+}

@@ -3,6 +3,15 @@ import styles from './navbar.module.scss';
 
 function Navbar() {
     const [dropdownStyle, setDropdownStyle] = useState({display: 'none'});
+    const [mobileNavStyle, setMobileNavStyle] = useState({display: 'none'});
+
+    const ChangeMenuStyle = () => {
+        setMobileNavStyle(
+            mobileNavStyle.display == 'none'?
+            {display: 'block'} :
+            {display: 'none'}
+        )
+    }
 
     return (
         <div className='sticky top-0 left-0 right-0 pb-8' style={{"zIndex": 1000000}}>
@@ -47,13 +56,13 @@ function Navbar() {
                                 </div>
                                 <input type="text" autoComplete="off" id="email-adress-icon" className={styles.searchBarInput + ' block pl-10 py-2 pr-2 w-10/12 bg-gray-50 rounded-lg border sm:text-sm step10'} placeholder="Search" />
                             </div>
-                            {/* <button type="button" className={styles.NavbarColapseMenu + ' inline-flex items-center p-2 text-sm rounded-lg md:hidden '} aria-controls="mobile-menu-3" aria-expanded="false">
+                            <button type="button" className={styles.NavbarColapseMenu + ' inline-flex items-center p-2 text-sm rounded-lg md:hidden '} aria-controls="mobile-menu-3" aria-expanded="false" onClick={ChangeMenuStyle}>
                                 <span className="sr-only">Open main menu</span>
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true" className="w-6 h-6 ml-10"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
-                            </button> */}
+                            </button>
                         </div>
                         
-                        <div className={styles.NAvBarMenu + ' justify-between items-center w-full md:flex md:w-auto md:order-1 hidden'}>
+                        <div className={styles.NAvBarMenu + ' justify-between items-center w-full md:flex md:w-auto md:order-1'}  style={mobileNavStyle}>
                             <a className='en' href='https://weds360.com/en/photos'>
                                 <div className='flex flex-col mt-4 md:flex-row md:space-x-2 xl:space-x-2 md:mt-2 md:text-sm md:font-medium mx-3 mb-2 '>
                                     <button

@@ -1,6 +1,7 @@
 // import styles from "./photogrid.module.scss"
 
 function PhotoGrid({ children }) {
+    console.log(children)
     return (
         <div className="container px-5 py-10 mx-auto">
             <div className="flex flex-wrap -m-4 ">

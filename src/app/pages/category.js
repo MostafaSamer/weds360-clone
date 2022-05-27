@@ -12,6 +12,7 @@ function Category() {
 
     const dispatch = useDispatch();
     const images = useSelector(state => state.imageReducer.images);
+    console.log({images})
 
     const { id } = useParams();
 

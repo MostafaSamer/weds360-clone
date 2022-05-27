@@ -10,26 +10,51 @@ import ErrDataEmpty from "../errdataempty/errdataempty"
 
 function PhotoSearch({ data }) {
 
+    // Pagenation
     const [currentPage, SetCurrentPage] = useState(1);
+    const [numberOfPages, SetNumberOfPages] = useState(1);
+    const perPage = 6;
 
-    console.log(data.length)
-
-    const onSearchClick = (e) => {
-        console.log(e)
+    // Filters
+    const [filteredCategories, SetFilteredCategories] = useState([]);
+    const FilterPageCat = (currentPage = 1, arr = data) => {
+        const from = (currentPage - 1) * perPage;
+        const to = from + (perPage);
+        SetFilteredCategories(arr.slice(from, to))
+    }
+    const FilterSearchCat = (arr) => {
+        let filterSearch = data
+            .filter(el => el.name.indexOf(searchText) !== -1);
+        SetFilteredCategories(filterSearch);
+        return filterSearch;
     }
 
-    const onClearClick = (e) => {
-        console.log(e)
+    // Events
+    const [searchText, SetSearchText] = useState("")
+    const onSearchClick = (e) => {
+        SetCurrentPage(1);
+        FilterPageCat(1);
+        let filteSearchar = FilterSearchCat();
+        FilterPageCat(1, filteSearchar);
+        SetNumberOfPages(Math.ceil(filteSearchar.length / 6));
+    }
+
+    const onClearClick = async () => {
+        SetCurrentPage(1);
+        FilterPageCat(1);
+        SetNumberOfPages(Math.ceil(data.length / 6));
+        SetSearchText("");
     }
 
     const onChangePage = (pageNumber) => {
-        console.log(pageNumber);
-        SetCurrentPage(pageNumber)
-
+        SetCurrentPage(pageNumber);
+        FilterPageCat(pageNumber);
     }
 
     useEffect(() => {
-    }, [])
+        FilterPageCat(1);
+        SetNumberOfPages(Math.ceil(data.length / 6));
+    }, [data])
 
     return (
         <div className="lg:flex lg:flex-row lg:w-11/12 lg:mx-auto">
@@ -43,7 +68,7 @@ function PhotoSearch({ data }) {
                                         <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true" className={styles.searchBarIcon + " h-5 w-5"}><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
                                         </div>
-                                        <input type="text" name="email" id="email" className={styles.searchBarInput + " border block w-full pl-10 sm:text-sm border-gray-300 rounded-lg shadow-sm hover:shadow-md"} placeholder="Search" value="" />
+                                        <input type="text" name="search" id="search" onChange={(e) => { SetSearchText(e.target.value) }} value={searchText} className={styles.searchBarInput + " border block w-full pl-10 sm:text-sm border-gray-300 rounded-lg shadow-sm hover:shadow-md"} placeholder="Search" />
                                     </div>
                                 </div>
                             </form>
@@ -60,21 +85,22 @@ function PhotoSearch({ data }) {
 
             <div className="lg:w-9/12">
                 <section className={styles.gridSection}>
-                    <PhotoGrid>
-                        {
-                            data.length > 0? 
-                            data.map((el, index) => (
-                                <PhotoCard
-                                key={index}
-                                image={el.image}
-                                name={el.name}
-                                state={el.state}
-                                />
-                            )) : <ErrDataEmpty />
-                        }
-                    </PhotoGrid>
+                    {
+                        filteredCategories.length > 0 ?
+                            <PhotoGrid>
+                                {
+                                    filteredCategories.map((el, index) => (
+                                        <PhotoCard
+                                            key={index}
+                                            image={el.image}
+                                            name={el.name}
+                                            state={"/category/" + el.id}
+                                        />
+                                    ))}
+                            </PhotoGrid> : <ErrDataEmpty />
+                    }
 
-                    <Pagination PageNumbers={Math.ceil(data.length / 6)} selected={currentPage} changePage={onChangePage} />
+                    <Pagination PageNumbers={numberOfPages} selected={currentPage} changePage={onChangePage} />
                 </section>
             </div>
         </div>

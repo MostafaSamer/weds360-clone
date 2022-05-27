@@ -1,5 +1,6 @@
 import FeaturedVendors from "../components/featuredvendors/featuredvendors";
 import NewNotable from "../components/newandnotable/newandnotable";
+import PhotoDetails from "../components/photodetails/photodetails";
 import TreeView from "../components/treeview/treeview";
 
 function SingilePhoto() {
@@ -13,8 +14,12 @@ function SingilePhoto() {
                         { name: "Irresistible appetizers’ corner", state: "#" }
                     ]} />
 
-                    {/* Photo Details */}
-                    {/* Related Photo */}
+                    <div className="container px-5 mx-auto">
+                        <div className="lg:w-4/5 py-5 mx-auto flex flex-wrap">
+                            <PhotoDetails />
+                            {/* Related Photo */}
+                        </div>
+                    </div>
                 </div>
                 <FeaturedVendors />
                 <NewNotable />

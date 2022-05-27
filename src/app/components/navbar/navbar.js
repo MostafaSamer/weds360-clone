@@ -11,7 +11,7 @@ function Navbar() {
                     <div className='container flex flex-wrap items-center mx-auto lg:w-11/12'>
                         <a className='flex' href="/en">
                             <span className='self-center text-lg font-semibold whitespace-nowrap md:mt-5'>
-                                <img className="h-6 xl:h-16 w-auto 2xl:mr-20" src="logo.png" alt="Workflow" style={{marginLeft: "10px"}} />
+                                <img className="h-6 xl:h-16 w-auto 2xl:mr-20" src="https://weds360.com/logo.png" alt="Workflow" style={{marginLeft: "10px"}} />
                             </span>
                         </a>
                         <div className='flex items-center md:order-3 mx-auto'>

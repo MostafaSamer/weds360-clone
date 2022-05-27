@@ -70,6 +70,14 @@
     .md\:flex-row {
         flex-direction: row !important;
     }
+    
+    .sm\:w-8 {
+        width: 2rem !important;
+    }
+    
+    .sm\:h-8 {
+        height: 2rem !important;
+    }
 }
 
 @media (min-width: 768px) {
@@ -213,6 +221,31 @@
 
     .lg\:w-3\/4 {
         width: 75% !important;
+    }
+    
+    .lg\:w-4\/5 {
+        width: 80% !important;
+    }
+
+    .lg\:w-1\/2 {
+        width: 50% !important;
+    }
+
+    .lg\:h-auto {
+        height: auto !important;
+    }
+
+    .lg\:pl-10 {
+        padding-left: 2.5rem !important;
+    }
+
+    .lg\:py-6 {
+        padding-top: 1.5rem !important;
+        padding-bottom: 1.5rem !important;
+    }
+
+    .lg\:mt-0, .lg\:my-0 {
+        margin-top: 0 !important;
     }
     
 }

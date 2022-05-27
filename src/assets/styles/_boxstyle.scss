@@ -1,6 +1,10 @@
 
 // Paddings
 
+.p-10 {
+    padding: 2.5rem !important;
+}
+
 .pt-5 {
     padding-top: 1.25rem !important;
 }
@@ -160,6 +164,10 @@
 
 .mr-3 {
     margin-right: 0.75rem !important;
+}
+
+.mr-2 {
+    margin-right: 0.5rem !important;
 }
 
 .ml-7 {
@@ -536,4 +544,20 @@
 
 .w-8\/12 {
     width: 66.666667% !important;
+}
+
+.h-64 {
+    height: 16rem !important;
+}
+
+.justify-start {
+    justify-content: flex-start !important;
+}
+
+.w-12 {
+    width: 3rem !important;
+}
+
+.h-12 {
+    width: 3rem !important;
 }

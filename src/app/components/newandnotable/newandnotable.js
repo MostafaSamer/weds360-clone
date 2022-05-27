@@ -11,7 +11,6 @@ import ErrDataEmpty from "../errdataempty/errdataempty";
 function NewNotable() {
     const dispatch = useDispatch();
     const notables = useSelector(state => state.notableReducer.notables);
-    console.log(notables)
 
     useEffect(() => {
         dispatch(getNotableFetch());

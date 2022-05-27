@@ -18,10 +18,11 @@ function Category() {
             <div>
                 <div>
                     <TreeView element={[
-                        { name: "All", state: "https://weds360.com/" }
+                        { name: "All Categories", state: "https://weds360.com/" },
+
                     ]} />
 
-                    {id && <PhotoSearch category={true}/>}
+                    {/* {id && <PhotoSearch category={photos}/>} */}
                 </div>
                 <FeaturedVendors />
                 <NewNotable />

@@ -1,4 +1,37 @@
 {
+    
+    "categories": [
+       {
+           "id": 1,
+           "name": "Navy",
+           "image": "https://weds360-production.s3.amazonaws.com/VENDOR_SERVICES/61898ced2c5c8629f4951f61/webp/large-618bd30b2bbd78a97327fbff90c44ec6.webp"
+       },
+       {
+            "id": 2,
+            "name": "Navy",
+            "image": "https://weds360-production.s3.amazonaws.com/VENDOR_SERVICES/61898ced2c5c8629f4951f61/webp/large-618bd30b2bbd78a97327fbff90c44ec6.webp"
+        },
+       {
+            "id": 3,
+            "name": "Navy",
+            "image": "https://weds360-production.s3.amazonaws.com/VENDOR_SERVICES/61898ced2c5c8629f4951f61/webp/large-618bd30b2bbd78a97327fbff90c44ec6.webp"
+        },
+       {
+            "id": 4,
+            "name": "Navy",
+            "image": "https://weds360-production.s3.amazonaws.com/VENDOR_SERVICES/61898ced2c5c8629f4951f61/webp/large-618bd30b2bbd78a97327fbff90c44ec6.webp"
+        },
+       {
+            "id": 5,
+            "name": "Navy",
+            "image": "https://weds360-production.s3.amazonaws.com/VENDOR_SERVICES/61898ced2c5c8629f4951f61/webp/large-618bd30b2bbd78a97327fbff90c44ec6.webp"
+        },
+       {
+            "id": 6,
+            "name": "Navy",
+            "image": "https://weds360-production.s3.amazonaws.com/VENDOR_SERVICES/61898ced2c5c8629f4951f61/webp/large-618bd30b2bbd78a97327fbff90c44ec6.webp"
+        }
+    ],
     "vendors": [
         {
             "id": 1,

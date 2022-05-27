@@ -4,9 +4,11 @@ import PhotoGrid from "../photogrid/photogrid"
 import PhotoCard from "../photocard/photocard"
 import BtnPrimary from "../btn-primary/btn-primary"
 import Pagination from "../pagination/pagination"
-import { useEffect, useState } from "react"
 
-function PhotoSearch({ category }) {
+import { useEffect, useState } from "react"
+import ErrDataEmpty from "../errdataempty/errdataempty"
+
+function PhotoSearch({ data }) {
 
     const [currentPage, SetCurrentPage] = useState(1);
 
@@ -25,8 +27,7 @@ function PhotoSearch({ category }) {
     }
 
     useEffect(() => {
-        console.log(category);
-    }, [category])
+    }, [])
 
     return (
         <div className="lg:flex lg:flex-row lg:w-11/12 lg:mx-auto">
@@ -58,15 +59,20 @@ function PhotoSearch({ category }) {
             <div className="lg:w-9/12">
                 <section className={styles.gridSection}>
                     <PhotoGrid>
-                        <PhotoCard />
-                        <PhotoCard />
-                        <PhotoCard />
-                        <PhotoCard />
-                        <PhotoCard />
-                        <PhotoCard />
+                        {
+                            data.length > 0? 
+                            data.map((el, index) => (
+                                <PhotoCard
+                                key={index}
+                                image={el.image}
+                                name={el.name}
+                                state={el.state}
+                                />
+                            )) : <ErrDataEmpty />
+                        }
                     </PhotoGrid>
 
-                    <Pagination PageNumbers={67} selected={currentPage} changePage={onChangePage} />
+                    <Pagination PageNumbers={data.length / 6} selected={currentPage} changePage={onChangePage} />
                 </section>
             </div>
         </div>

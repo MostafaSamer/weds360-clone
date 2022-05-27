@@ -9,7 +9,7 @@ import {
 
 // Images
 function imagesFetch() {
-    return fetch('http://localhost:3000/images')
+    return fetch('http://localhost:4000/images')
     .then(response => response.json());
 }
 
@@ -20,7 +20,7 @@ function* workGetImagesFetch() {
 
 // Categories
 function categoriesFetch() {
-    return fetch('http://localhost:3000/categories')
+    return fetch('http://localhost:4000/categories')
     .then(response => response.json());
 }
 
@@ -31,7 +31,7 @@ function* workGetCategoriesFetch() {
 
 // Vendors
 function vendorsFetch() {
-    return fetch('http://localhost:3000/vendors')
+    return fetch('http://localhost:4000/vendors')
     .then(response => response.json());
 }
 
@@ -42,7 +42,7 @@ function* workGetVendorsFetch() {
 
 // Notable
 function notableFetch() {
-    return fetch('http://localhost:3000/newandnotable')
+    return fetch('http://localhost:4000/newandnotable')
     .then(response => response.json());
 }
 

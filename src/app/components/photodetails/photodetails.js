@@ -1,14 +1,14 @@
 import styles from "./photodetails";
 
-function PhotoDetails() {
+function PhotoDetails({ data }) {
     return (
         <>
-            <img alt="Irresistible appetizers’ corner" className="lg:w-1/2 w-full lg:h-auto h-64 object-cover object-center rounded" src="https://weds360-production.s3.amazonaws.com/store/photo/431/src/large-6792d00acebc42fc36a6abba09f4513b.jpeg" />
+            <img alt="Irresistible appetizers’ corner" className="lg:w-1/2 w-full lg:h-auto h-64 object-cover object-center rounded" src={data.image} />
 
             <div className="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0 p-10 ">
-                <h1 className={styles.PhotoDetailsHeader + " text-gray-900 text-3xl title-font font-medium mb-1"}>Irresistible appetizers’ corner</h1>
-                <a rel="noreferrer" className="font-bold" href="/en/service/61898ced2c5c8629f4951ec7/umai-" style={{color: "rgb(2, 77, 76)"}}>Umai </a>
-                <p className="leading-relaxed">Satisfy your guests with mouth-watering irresistible appetizers corner</p>
+                <h1 className={styles.PhotoDetailsHeader + " text-gray-900 text-3xl title-font font-medium mb-1"}>I{data.name}</h1>
+                <a rel="noreferrer" className="font-bold" href="/en/service/61898ced2c5c8629f4951ec7/umai-" style={{color: "rgb(2, 77, 76)"}}>{data.by} </a>
+                <p className="leading-relaxed">{data.desc}</p>
 
                 <div className="flex justify-start mt-5">
                     <div className="mr-3">
@@ -36,7 +36,7 @@ function PhotoDetails() {
                             </div>
                         </a>
                         <div className="mt-1 ml-1 font-semibold" style={{color: "color: rgba(200, 30, 30, 1)"}}>
-                            <p className="text-2xl">3</p>
+                            <p className="text-2xl">{data.likes}</p>
                         </div>
                     </div>
 

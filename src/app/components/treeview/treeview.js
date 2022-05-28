@@ -8,15 +8,17 @@ function TreeView({ element }) {
                     {element.map((el, index) => {
                         return (
                             <>
-                                {index === 0 && <li className="MuiBreadcrumbs-li">
-                                    <a href={el.state} className={styles.TreeElementAnchor + " font-bold text-lg"}>{el.name}</a>
-                                </li>}
-                                {index !== 0 && <>
-                                    <li aria-hidden="true" className="MuiBreadcrumbs-separator css-3mf706">›</li>
+                                {index != element.length-1 ?
+                                    <>
+                                        <li className="MuiBreadcrumbs-li">
+                                            <a href={el.state} className={styles.TreeElementAnchor + " font-bold text-lg"}>{el.name}</a>
+                                        </li>
+                                        <li aria-hidden="true" className="MuiBreadcrumbs-separator css-3mf706">›</li>
+                                    </> : 
                                     <li className="MuiBreadcrumbs-li">
                                         <p className={styles.TreeElementPara + " MuiTypography-root MuiTypography-body1 css-9l3uo3"}>{el.name}</p>
                                     </li>
-                                </>}
+                                }
                             </>
                         )
                     })}

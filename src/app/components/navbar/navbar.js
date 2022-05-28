@@ -34,7 +34,7 @@ function Navbar() {
                         <div className='flex items-center md:order-3 mx-auto'>
 
                             {/* Search Mobile */}
-                            <div className='block lg:hidden w-1/3 md:mr-0 ml-1' style={{width: "200px"}}>
+                            <div className={styles.NAvBarMenuMobile + ' lg:hidden w-1/3 md:mr-0 ml-1'} style={{width: "200px"}}>
                                 <div className='hidden sm:flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none'></div>
                                 <input type="text" id="email-adress-icon" className={styles.NavBarInput + ' block p-2 pl-10 w-11/12 rounded-lg border sm:text-sm '} placeholder="Search" />
                             </div>

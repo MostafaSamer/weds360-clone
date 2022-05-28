@@ -14,9 +14,6 @@ function Category() {
     let images = useSelector(state => state.imageReducer.images);
     let categories = useSelector(state => state.categoriesReducer.categories);
 
-    const [imagesCat, SetImagesCat] = useState([]);
-    const [currentCategory, SetCurrentCcategory] = useState();
-
     const { id } = useParams();
 
     useEffect(() => {

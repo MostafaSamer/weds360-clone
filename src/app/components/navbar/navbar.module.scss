@@ -77,7 +77,7 @@
 }
 
 .NAvBarMenuWeb { display: none !important; }
-.NAvBarMenuMobile { display: block !important; }
+.NAvBarMenuMobile { display: block; }
 
 @media (min-width: 768px) {
     .NAvBarMenuWeb { display: flex !important; }

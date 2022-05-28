@@ -52,6 +52,7 @@ function PhotoSearch({ data }) {
     }
 
     useEffect(() => {
+        console.log(data);
         FilterPageCat(1);
         SetNumberOfPages(Math.ceil(data.length / 6));
     }, [data])
@@ -94,7 +95,7 @@ function PhotoSearch({ data }) {
                                             key={index}
                                             image={el.image}
                                             name={el.name}
-                                            state={"/category/" + el.id}
+                                            state={el.state}
                                         />
                                     ))}
                             </PhotoGrid> : <ErrDataEmpty />

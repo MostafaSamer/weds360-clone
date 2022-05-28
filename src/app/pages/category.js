@@ -6,35 +6,42 @@ import PhotoSearch from "../components/photosearch/photosearch";
 import TreeView from "../components/treeview/treeview";
 
 import { useDispatch, useSelector } from 'react-redux';
-import { getImagesFetch } from '../../actions';
+import { getCategoriesFetch, getImagesFetch } from '../../actions';
 
 function Category() {
 
     const dispatch = useDispatch();
-    const images = useSelector(state => state.imageReducer.images);
+    let images = useSelector(state => state.imageReducer.images);
+    let categories = useSelector(state => state.categoriesReducer.categories);
 
     const [imagesCat, SetImagesCat] = useState([]);
+    const [currentCategory, SetCurrentCcategory] = useState();
 
     const { id } = useParams();
 
     useEffect(() => {
+        dispatch(getCategoriesFetch());
+        categories = categories
+        .filter(cat => cat.id == id);
+
+
         dispatch(getImagesFetch());
-        SetImagesCat(
-            images
-            .filter(image => image.category == id)
-        )
-    }, [id])
+        // console.log({images})
+        // images = images
+        // .filter(image => image.category == id);
+        // console.log({images})
+    }, [])
 
     return (
         <div>
             <div>
                 <div>
                     <TreeView element={[
-                        { name: "All Categories", state: "https://weds360.com/" },
-
+                        { name: "All Categories", state: "/" },
+                        { name: categories[0]?.name, state: "#" },
                     ]} />
 
-                    {id && <PhotoSearch data={imagesCat}/>}
+                    <PhotoSearch data={images} />
                 </div>
                 <FeaturedVendors />
                 <NewNotable />

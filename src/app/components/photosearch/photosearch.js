@@ -16,45 +16,46 @@ function PhotoSearch({ data }) {
     const perPage = 6;
 
     // Filters
-    const [filteredCategories, SetFilteredCategories] = useState([]);
-    const FilterPageCat = (currentPage = 1, arr = data) => {
+    const [filteredData, SetFilteredData] = useState([]);
+
+    const GetFilterPageData = () => {
         const from = (currentPage - 1) * perPage;
         const to = from + (perPage);
-        SetFilteredCategories(arr.slice(from, to))
+        return filteredData.slice(from, to);
     }
-    const FilterSearchCat = (arr) => {
+
+    const FilterSearchData = () => {
         let filterSearch = data
             .filter(el => el.name.indexOf(searchText) !== -1);
-        SetFilteredCategories(filterSearch);
+        SetFilteredData(filterSearch);
         return filterSearch;
     }
 
     // Events
-    const [searchText, SetSearchText] = useState("")
+    const [searchText, SetSearchText] = useState("");
+
     const onSearchClick = (e) => {
         SetCurrentPage(1);
-        FilterPageCat(1);
-        let filteSearchar = FilterSearchCat();
-        FilterPageCat(1, filteSearchar);
+        let filteSearchar = FilterSearchData();
+        console.log(filteSearchar)
         SetNumberOfPages(Math.ceil(filteSearchar.length / 6));
     }
 
     const onClearClick = async () => {
         SetCurrentPage(1);
-        FilterPageCat(1);
         SetNumberOfPages(Math.ceil(data.length / 6));
         SetSearchText("");
+        SetFilteredData(data)
     }
 
     const onChangePage = (pageNumber) => {
+        onSearchClick();
         SetCurrentPage(pageNumber);
-        FilterPageCat(pageNumber);
     }
 
     useEffect(() => {
-        console.log(data);
-        FilterPageCat(1);
         SetNumberOfPages(Math.ceil(data.length / 6));
+        SetFilteredData(data)
     }, [data])
 
     return (
@@ -87,10 +88,10 @@ function PhotoSearch({ data }) {
             <div className="lg:w-9/12">
                 <section className={styles.gridSection}>
                     {
-                        filteredCategories.length > 0 ?
+                        GetFilterPageData(filteredData).length > 0 ?
                             <PhotoGrid>
                                 {
-                                    filteredCategories.map((el, index) => (
+                                    GetFilterPageData(filteredData).map((el, index) => (
                                         <PhotoCard
                                             key={index}
                                             image={el.image}
